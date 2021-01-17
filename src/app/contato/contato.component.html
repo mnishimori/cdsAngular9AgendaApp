@@ -1,0 +1,16 @@
+<mat-toolbar>Contatos</mat-toolbar>
+<form [formGroup]="formulario" >
+    <mat-form-field class="full-width">
+        <mat-label>Nome:</mat-label>
+        <input formControlName="nome" matInput placeholder="Digite seu nome">
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+        <mat-label>e-mail:</mat-label>
+        <input formControlName="email" matInput placeholder="Digite seu email"/>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" 
+        [disabled]="!this.formulario.valid"
+        (click)="create()">Cadastrar</button>
+</form>
